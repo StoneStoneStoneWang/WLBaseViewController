@@ -3,10 +3,10 @@
 Pod::Spec.new do |s|
 
 s.name         = "TSBaseViewController_Swift"
-s.version      = "1.0.0"
+s.version      = "1.0.1"
 s.summary      = "A Lib For vc."
 s.description  = <<-DESC
-第一次提交 之后x添加描述
+A Lib For vc.
 DESC
 
 s.homepage     = "https://github.com/StoneStoneStoneWang/TSBaseViewController_Swift"

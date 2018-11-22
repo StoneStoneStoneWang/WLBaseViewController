@@ -51,7 +51,7 @@ extension UIViewController {
 // MARK: 初始化wwebview
 extension UIViewController {
     
-    @objc func shouldInitWebView() -> Bool {
+    @objc open func shouldInitWebView() -> Bool {
         
         return false
     }

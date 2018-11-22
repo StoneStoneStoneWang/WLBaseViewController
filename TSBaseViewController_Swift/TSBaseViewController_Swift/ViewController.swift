@@ -40,5 +40,4 @@ extension ViewController {
         
         self.navigationController?.pushViewController(vc, animated: true)
     }
-    
 }

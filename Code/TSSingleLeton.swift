@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 // 使用某些功能的时候 需要 在appdidluanching的时候调用这个函数
-class TSSingleLeton {
+public class TSSingleLeton {
     
     public static func needReg() {
         

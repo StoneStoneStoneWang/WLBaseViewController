@@ -8,10 +8,10 @@
 
 import UIKit
 
-class TSBaseViewController: UIViewController {
+open class TSBaseViewController: UIViewController {
     
     
-    override func viewDidLoad() {
+    open override func viewDidLoad() {
         super.viewDidLoad()
         
         configNaviItem()
@@ -23,6 +23,8 @@ class TSBaseViewController: UIViewController {
         configOwnSubViews()
         
         prepareData()
+        
+        configAuto()
     }
 }
 

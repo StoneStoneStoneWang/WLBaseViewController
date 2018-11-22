@@ -8,23 +8,25 @@
 
 import UIKit
 import TSToolKit_Swift
-struct TSConfig_Swift {
+class TSConfig_Swift: NSObject {
     
     static let shared = TSConfig_Swift()
     
-    private init() {
+    private override init() {
         
-        let json = NSDictionary(contentsOfFile: Bundle.main.path(forResource: "TSConfig_Swift", ofType: "plist")!)!
+        guard let path = Bundle.main.path(forResource: "TSConfig_Swift", ofType: "plist") else { return }
         
-        Back_Image = json["Back_Image"] as! String
+        guard let json = NSDictionary(contentsOfFile: path) else { return }
         
-        Title_FontSize = CGFloat(Float(json["Title_FontSize"] as! String)!)
+        Back_Image = json["Back_Image"] as? String ?? ""
         
-        Title_HEXColor = json["Title_HEXColor"] as! String
+        Title_FontSize = CGFloat(Float(json["Title_FontSize"] as? String ?? "") ?? 0)
         
-        Background_HEXColor = json["Background_HEXColor"] as! String
+        Title_HEXColor = json["Title_HEXColor"] as? String ?? ""
         
-        NaviBackground_HEXColor = json["NaviBackground_HEXColor"] as! String
+        Background_HEXColor = json["Background_HEXColor"] as? String ?? ""
+        
+        NaviBackground_HEXColor = json["NaviBackground_HEXColor"] as? String ?? ""
     }
     // 返回按钮
     var Back_Image: String = ""
@@ -44,7 +46,7 @@ public enum TSNaviTransionType {
     case present
 }
 
-class TSNaviController: UINavigationController {
+open class TSNaviController: UINavigationController {
     
     open var navBarHairlineImageView: UIImageView? {
         
@@ -72,24 +74,43 @@ class TSNaviController: UINavigationController {
         return true
     }
     
-    override func viewWillAppear(_ animated: Bool) {
+    override open func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
         navBarHairlineImageView?.isHidden = isLineHidden()
     }
     open var transitionType: TSNaviTransionType = .push
 
+    public override init(rootViewController: UIViewController) {
+        super.init(rootViewController: rootViewController)
+        
+    }
+    
+    required public init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+  
+    public override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
+        super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
+    }
+    
     open override func viewDidLoad() {
         super.viewDidLoad()
         
         let shared = TSConfig_Swift.shared
         
-        navigationBar.barTintColor = TSHEXCOLOR(hexColor: shared.NaviBackground_HEXColor)
+        if !shared.NaviBackground_HEXColor.isEmpty {
+            
+            navigationBar.barTintColor = TSHEXCOLOR(hexColor: shared.NaviBackground_HEXColor)
+        }
         
-        navigationBar.titleTextAttributes = [
-            NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: shared.Title_FontSize),
-            NSAttributedString.Key.foregroundColor: TSHEXCOLOR(hexColor: shared.Title_HEXColor)
-        ]
+        if !shared.Title_HEXColor.isEmpty {
+            
+            navigationBar.titleTextAttributes = [
+                NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: shared.Title_FontSize),
+                NSAttributedString.Key.foregroundColor: TSHEXCOLOR(hexColor: shared.Title_HEXColor)
+            ]
+        }
     }
 
     open override func pushViewController(_ viewController: UIViewController, animated: Bool) {

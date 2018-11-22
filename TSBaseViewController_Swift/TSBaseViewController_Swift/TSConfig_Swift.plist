@@ -5,7 +5,7 @@
 	<key>Back_Image</key>
 	<string>Back_Image</string>
 	<key>Title_FontSize</key>
-	<integer>20</integer>
+	<string>20</string>
 	<key>Title_HEXColor</key>
 	<string>#666666</string>
 	<key>Background_HEXColor</key>
