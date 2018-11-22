@@ -97,8 +97,6 @@ open class TSNaviController: UINavigationController {
     open override func viewDidLoad() {
         super.viewDidLoad()
         
-        delegate = self
-        
         let shared = TSConfig_Swift.shared
         
         if !shared.NaviBackground_HEXColor.isEmpty {
