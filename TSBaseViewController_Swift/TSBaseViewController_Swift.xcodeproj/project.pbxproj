@@ -19,12 +19,12 @@
 		6C7F602E21A3EA3000B0CF20 /* UITabbarController+Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C7F602D21A3EA3000B0CF20 /* UITabbarController+Config.swift */; };
 		6C7F603021A3ED0B00B0CF20 /* UINavigationController+Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C7F602F21A3ED0B00B0CF20 /* UINavigationController+Config.swift */; };
 		6C7F603221A3F6FF00B0CF20 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C7F603121A3F6FF00B0CF20 /* MainViewController.swift */; };
-		6C7F603421A407B500B0CF20 /* TSNaviController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C7F603321A407B500B0CF20 /* TSNaviController.swift */; };
+		6C7F603421A407B500B0CF20 /* WLNaviController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C7F603321A407B500B0CF20 /* WLNaviController.swift */; };
 		6C7F603621A4080500B0CF20 /* TSConfig_Swift.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6C7F603521A4080500B0CF20 /* TSConfig_Swift.plist */; };
 		6C7F603821A40E0300B0CF20 /* UIBarButtonItem+Creat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C7F603721A40E0300B0CF20 /* UIBarButtonItem+Creat.swift */; };
-		6C7F603A21A40F9500B0CF20 /* TSBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C7F603921A40F9500B0CF20 /* TSBaseViewController.swift */; };
+		6C7F603A21A40F9500B0CF20 /* WLBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C7F603921A40F9500B0CF20 /* WLBaseViewController.swift */; };
 		6C7F603C21A4153400B0CF20 /* UIViewController+Call.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C7F603B21A4153400B0CF20 /* UIViewController+Call.swift */; };
-		6C7F603E21A419D700B0CF20 /* TSSingleLeton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C7F603D21A419D700B0CF20 /* TSSingleLeton.swift */; };
+		6C7F603E21A419D700B0CF20 /* WLSingleLeton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C7F603D21A419D700B0CF20 /* WLSingleLeton.swift */; };
 		6C7F604021A41B2E00B0CF20 /* UIViewController+Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C7F603F21A41B2E00B0CF20 /* UIViewController+Photo.swift */; };
 		6C98C21C21A3C2D300B9A493 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 6C98C21B21A3C2D300B9A493 /* Podfile */; };
 		6C98C21E21A3C38600B9A493 /* UIViewController+Swizzling.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C98C21D21A3C38600B9A493 /* UIViewController+Swizzling.swift */; };
@@ -69,12 +69,12 @@
 		6C7F602D21A3EA3000B0CF20 /* UITabbarController+Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITabbarController+Config.swift"; sourceTree = "<group>"; };
 		6C7F602F21A3ED0B00B0CF20 /* UINavigationController+Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINavigationController+Config.swift"; sourceTree = "<group>"; };
 		6C7F603121A3F6FF00B0CF20 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
-		6C7F603321A407B500B0CF20 /* TSNaviController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TSNaviController.swift; sourceTree = "<group>"; };
+		6C7F603321A407B500B0CF20 /* WLNaviController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WLNaviController.swift; sourceTree = "<group>"; };
 		6C7F603521A4080500B0CF20 /* TSConfig_Swift.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = TSConfig_Swift.plist; sourceTree = "<group>"; };
 		6C7F603721A40E0300B0CF20 /* UIBarButtonItem+Creat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIBarButtonItem+Creat.swift"; sourceTree = "<group>"; };
-		6C7F603921A40F9500B0CF20 /* TSBaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TSBaseViewController.swift; sourceTree = "<group>"; };
+		6C7F603921A40F9500B0CF20 /* WLBaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WLBaseViewController.swift; sourceTree = "<group>"; };
 		6C7F603B21A4153400B0CF20 /* UIViewController+Call.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Call.swift"; sourceTree = "<group>"; };
-		6C7F603D21A419D700B0CF20 /* TSSingleLeton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TSSingleLeton.swift; sourceTree = "<group>"; };
+		6C7F603D21A419D700B0CF20 /* WLSingleLeton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WLSingleLeton.swift; sourceTree = "<group>"; };
 		6C7F603F21A41B2E00B0CF20 /* UIViewController+Photo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Photo.swift"; sourceTree = "<group>"; };
 		6C98C21B21A3C2D300B9A493 /* Podfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		6C98C21D21A3C38600B9A493 /* UIViewController+Swizzling.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Swizzling.swift"; sourceTree = "<group>"; };
@@ -181,12 +181,12 @@
 				6C7F602B21A3E46800B0CF20 /* UINavigationController+Orientation.swift */,
 				6C7F602D21A3EA3000B0CF20 /* UITabbarController+Config.swift */,
 				6C7F602F21A3ED0B00B0CF20 /* UINavigationController+Config.swift */,
-				6C7F603321A407B500B0CF20 /* TSNaviController.swift */,
+				6C7F603321A407B500B0CF20 /* WLNaviController.swift */,
 				6C7F603721A40E0300B0CF20 /* UIBarButtonItem+Creat.swift */,
-				6C7F603921A40F9500B0CF20 /* TSBaseViewController.swift */,
+				6C7F603921A40F9500B0CF20 /* WLBaseViewController.swift */,
 				6C7F603B21A4153400B0CF20 /* UIViewController+Call.swift */,
 				6C7F603F21A41B2E00B0CF20 /* UIViewController+Photo.swift */,
-				6C7F603D21A419D700B0CF20 /* TSSingleLeton.swift */,
+				6C7F603D21A419D700B0CF20 /* WLSingleLeton.swift */,
 			);
 			name = Code;
 			path = ../../Code;
@@ -381,15 +381,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6C7F603421A407B500B0CF20 /* TSNaviController.swift in Sources */,
+				6C7F603421A407B500B0CF20 /* WLNaviController.swift in Sources */,
 				6C7F602A21A3E45400B0CF20 /* UIViewController+config.swift in Sources */,
 				6C7F603021A3ED0B00B0CF20 /* UINavigationController+Config.swift in Sources */,
 				6C7F602821A3E44500B0CF20 /* UITabBarController+Orientation.swift in Sources */,
 				6C7F602E21A3EA3000B0CF20 /* UITabbarController+Config.swift in Sources */,
-				6C7F603E21A419D700B0CF20 /* TSSingleLeton.swift in Sources */,
+				6C7F603E21A419D700B0CF20 /* WLSingleLeton.swift in Sources */,
 				6C7F603C21A4153400B0CF20 /* UIViewController+Call.swift in Sources */,
 				6C7F603821A40E0300B0CF20 /* UIBarButtonItem+Creat.swift in Sources */,
-				6C7F603A21A40F9500B0CF20 /* TSBaseViewController.swift in Sources */,
+				6C7F603A21A40F9500B0CF20 /* WLBaseViewController.swift in Sources */,
 				6C98C21E21A3C38600B9A493 /* UIViewController+Swizzling.swift in Sources */,
 				6C7EBC5B219B1CF700B093BA /* ViewController.swift in Sources */,
 				6C7F603221A3F6FF00B0CF20 /* MainViewController.swift in Sources */,

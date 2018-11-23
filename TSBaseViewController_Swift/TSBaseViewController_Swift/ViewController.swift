@@ -10,7 +10,7 @@ import UIKit
 import TSToolKit_Swift
 
 
-class ViewController: UIViewController {
+class ViewController: WLBaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
