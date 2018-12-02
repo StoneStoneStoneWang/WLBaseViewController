@@ -10,7 +10,13 @@ import UIKit
 import TSToolKit_Swift
 
 
-class ViewController: WLBaseViewController {
+class ViewController: WLLoadingViewController {
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,6 +34,21 @@ class ViewController: WLBaseViewController {
     
     let btn = UIButton(type: .custom)
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        perform(#selector(delay), with: nil, afterDelay: 1)
+    }
+    
+    @objc func delay() {
+        
+        loadingView.onLoadingStatusChanged(.fail)
+        
+        loadingView.reloadAction = { [weak self] in
+            
+            self!.loadingView.onLoadingStatusChanged(.reload)
+        }
+    }
 }
 
 extension ViewController {

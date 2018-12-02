@@ -12,5 +12,7 @@
 	<string>#eeeeee</string>
 	<key>NaviBackground_HEXColor</key>
 	<string>#ffffff</string>
+	<key>Loading_Image</key>
+	<string>Loading_Image</string>
 </dict>
 </plist>
