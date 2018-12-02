@@ -1,21 +1,16 @@
 PODS:
-  - TSToolKit_Swift (1.1.1)
+  - WLToolsKit (1.1.8)
 
 DEPENDENCIES:
-  - TSToolKit_Swift (from `https://github.com/StoneStoneStoneWang/TSToolKit_Swift.git`)
+  - WLToolsKit
 
-EXTERNAL SOURCES:
-  TSToolKit_Swift:
-    :git: https://github.com/StoneStoneStoneWang/TSToolKit_Swift.git
-
-CHECKOUT OPTIONS:
-  TSToolKit_Swift:
-    :commit: caeca4da9fad868c2220a56fafadfb01d62df833
-    :git: https://github.com/StoneStoneStoneWang/TSToolKit_Swift.git
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - WLToolsKit
 
 SPEC CHECKSUMS:
-  TSToolKit_Swift: 4f8605aaa825e634ba37e9b0b463337b61272e51
+  WLToolsKit: d8a410e736f47ca36af259b8a14f2fb0cc5ccd7c
 
-PODFILE CHECKSUM: 66b7c97f8b6e52f27d258ad8a4f24a9fba7bb9a0
+PODFILE CHECKSUM: 1d6c4387bb669929a13896039dabf1fb13ad5c1b
 
 COCOAPODS: 1.5.3

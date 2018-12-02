@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import TSToolKit_Swift
+import WLToolsKit
 class TSConfig_Swift: NSObject {
     
     static let shared = TSConfig_Swift()
