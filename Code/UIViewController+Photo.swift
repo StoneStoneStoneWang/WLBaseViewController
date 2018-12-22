@@ -6,8 +6,8 @@
 ////  Copyright © 2018年 three stone 王. All rights reserved.
 ////
 //
-//import Foundation
-//import UIKit
+import Foundation
+import UIKit
 //import AssetsLibrary
 //import MobileCoreServices
 //
@@ -101,15 +101,6 @@
 //
 //                self.imagePicker = UIImagePickerController()
 //
-//                self.imagePicker?.allowsEditing = true
-//
-//                self.imagePicker?.modalTransitionStyle = .coverVertical
-//
-//                self.imagePicker?.sourceType = .camera
-//
-//                self.imagePicker?.delegate = self
-//
-//                self.present(self.imagePicker!, animated: true, completion: nil)
 //            }
 //        }
 //
@@ -157,3 +148,27 @@
 //    }
 //
 //}
+
+
+open class WLImagePickerImpl: NSObject , UINavigationControllerDelegate,UIImagePickerControllerDelegate {
+    
+    open var imagePicker: UIImagePickerController = UIImagePickerController().then {
+        
+        $0.allowsEditing = true
+        
+        //        self.imagePicker?.modalTransitionStyle = .coverVertical
+        //
+        //        self.imagePicker?.sourceType = .camera
+        //
+        //        self.imagePicker?.delegate = self
+    }
+    
+    public func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+        
+        
+    }
+    public func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        
+        
+    }
+}

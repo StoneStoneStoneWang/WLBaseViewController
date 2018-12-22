@@ -42,7 +42,7 @@ class ViewController: WLLoadingViewController {
     
     @objc func delay() {
         
-        loadingView.onLoadingStatusChanged(.fail)
+        loadingView.onLoadingStatusChanged(.succ)
         
         loadingView.reloadAction = { [weak self] in
             
@@ -59,6 +59,10 @@ extension ViewController {
         
         vc.title = "二级"
         
-        self.navigationController?.pushViewController(vc, animated: true)
+        let navi = WLNaviController(rootViewController: vc)
+        
+        navi.transitionType = .present
+        
+        self.present(navi, animated: true, completion: nil)
     }
 }

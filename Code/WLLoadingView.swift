@@ -104,6 +104,8 @@ extension WLLoadingView {
         activity.startAnimating()
         
         stateLabel.text = ""
+        
+        reloadItem.isHidden = true
     }
     
     @objc open func onFail() {
@@ -111,6 +113,8 @@ extension WLLoadingView {
         activity.stopAnimating()
         
         stateLabel.text = "点击屏幕 重新加载"
+        
+        reloadItem.isHidden = false
     }
     @objc open func onSucc() {
         
@@ -121,6 +125,8 @@ extension WLLoadingView {
         activity.startAnimating()
         
         stateLabel.text = ""
+        
+        reloadItem.isHidden = true
     }
     @objc open func onDismiss() {
         

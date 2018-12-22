@@ -11,7 +11,7 @@
 	<key>Background_HEXColor</key>
 	<string>#eeeeee</string>
 	<key>NaviBackground_HEXColor</key>
-	<string>#ffffff</string>
+	<string>#eeeeee</string>
 	<key>Loading_Image</key>
 	<string>Loading_Image</string>
 </dict>

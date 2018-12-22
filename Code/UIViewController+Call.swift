@@ -13,13 +13,9 @@ extension UIViewController {
     
     open var phoneView: WKWebView? {
         
-        set {
-            objc_setAssociatedObject(self, "phoneView", newValue, .OBJC_ASSOCIATION_RETAIN_NONATOMIC)
-        }
-        get {
-            
-            return objc_getAssociatedObject(self, "phoneView") as? WKWebView
-        }
+        set { objc_setAssociatedObject(self, "phoneView", newValue, .OBJC_ASSOCIATION_RETAIN_NONATOMIC) }
+        
+        get { return objc_getAssociatedObject(self, "phoneView") as? WKWebView }
     }
     
     public static func callClassInit() {

@@ -15,7 +15,7 @@ extension UIViewController {
     
     @objc open func configOwnProperties() {
         
-//        view.backgroundColor = 
+        //        view.backgroundColor = 
     }
     
     @objc open func addOwnSubViewController() {}
@@ -30,7 +30,7 @@ extension UIViewController {
         
         if #available(iOS 11.0, *) {
             
-           _ = view.subviews.map {
+            _ = view.subviews.map {
                 
                 if $0 is UIScrollView {
                     
@@ -43,8 +43,11 @@ extension UIViewController {
             
             automaticallyAdjustsScrollViewInsets = false
         }
-        
     }
+    
+    @objc open func configViewModel() {}
+    
+    @objc open func configLoading() {}
 }
 
 

@@ -32,9 +32,15 @@ open class WLBaseViewController: UIViewController {
         
         configOwnSubViews()
         
+        configLoading()
+        
+        configViewModel()
+        
         prepareData()
         
         configAuto()
+        
+        addOwnSubViewController()
     }
     
     fileprivate func findHairlineImageViewUnder(view: UIView) -> UIImageView? {

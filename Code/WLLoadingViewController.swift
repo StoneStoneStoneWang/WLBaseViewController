@@ -12,8 +12,7 @@ open class WLLoadingViewController: WLBaseViewController {
     
     open var loadingView: WLLoadingView = WLLoadingView(frame: .zero)
     
-    open override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
+    open override func configLoading() {
         
         loadingView.showToSuperView(view)
         
@@ -21,8 +20,4 @@ open class WLLoadingViewController: WLBaseViewController {
         
         loadingView.onLoadingStatusChanged(.loading)
     }
-}
-extension WLLoadingViewController {
-    
-    
 }
