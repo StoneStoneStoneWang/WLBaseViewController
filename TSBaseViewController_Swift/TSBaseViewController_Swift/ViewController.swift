@@ -10,7 +10,7 @@ import UIKit
 import WLToolsKit
 
 
-class ViewController: WLLoadingViewController {
+class ViewController: WLBaseViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -37,17 +37,17 @@ class ViewController: WLLoadingViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
-        perform(#selector(delay), with: nil, afterDelay: 1)
+//        perform(#selector(delay), with: nil, afterDelay: 1)
     }
     
     @objc func delay() {
         
-        loadingView.onLoadingStatusChanged(.succ)
-        
-        loadingView.reloadAction = { [weak self] in
-            
-            self!.loadingView.onLoadingStatusChanged(.reload)
-        }
+//        loadingView.onLoadingStatusChanged(.succ)
+//
+//        loadingView.reloadAction = { [weak self] in
+//
+//            self!.loadingView.onLoadingStatusChanged(.reload)
+//        }
     }
 }
 
@@ -55,14 +55,18 @@ extension ViewController {
     
     @objc func onClick() {
         
-        let vc = ViewController()
+        let vc = WLInnerViewController()
         
-        vc.title = "二级"
+        self.navigationController?.pushViewController(vc, animated: true)
         
-        let navi = WLNaviController(rootViewController: vc)
-        
-        navi.transitionType = .present
-        
-        self.present(navi, animated: true, completion: nil)
+//        let vc = ViewController()
+//
+//        vc.title = "二级"
+//
+//        let navi = WLNaviController(rootViewController: vc)
+//
+//        navi.transitionType = .present
+//
+//        self.present(navi, animated: true, completion: nil)
     }
 }
