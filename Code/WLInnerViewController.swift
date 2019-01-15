@@ -10,7 +10,7 @@ import UIKit
 import WebKit
 import WLToolsKit
 
-public class WLInnerViewController: WLLoadingViewController {
+open class WLInnerViewController: WLLoadingViewController {
     
     open var webView: WKWebView = WKWebView(frame: .zero)
     
