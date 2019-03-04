@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		6C0A652C21B36F23009969D3 /* WLLoadingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C0A652B21B36F23009969D3 /* WLLoadingViewController.swift */; };
 		6C0A652E21B36FC9009969D3 /* WLLoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C0A652D21B36FC9009969D3 /* WLLoadingView.swift */; };
+		6C119B9A222D0D1C00D21E5F /* WLNaviControllerConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C119B99222D0D1C00D21E5F /* WLNaviControllerConfig.swift */; };
 		6C7EBC59219B1CF700B093BA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C7EBC58219B1CF700B093BA /* AppDelegate.swift */; };
 		6C7EBC5B219B1CF700B093BA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C7EBC5A219B1CF700B093BA /* ViewController.swift */; };
 		6C7EBC60219B1CF900B093BA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6C7EBC5F219B1CF900B093BA /* Assets.xcassets */; };
@@ -25,11 +26,7 @@
 		6C7F603621A4080500B0CF20 /* TSConfig_Swift.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6C7F603521A4080500B0CF20 /* TSConfig_Swift.plist */; };
 		6C7F603821A40E0300B0CF20 /* UIBarButtonItem+Creat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C7F603721A40E0300B0CF20 /* UIBarButtonItem+Creat.swift */; };
 		6C7F603A21A40F9500B0CF20 /* WLBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C7F603921A40F9500B0CF20 /* WLBaseViewController.swift */; };
-		6C7F603C21A4153400B0CF20 /* UIViewController+Call.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C7F603B21A4153400B0CF20 /* UIViewController+Call.swift */; };
-		6C7F603E21A419D700B0CF20 /* WLSingleLeton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C7F603D21A419D700B0CF20 /* WLSingleLeton.swift */; };
-		6C7F604021A41B2E00B0CF20 /* UIViewController+Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C7F603F21A41B2E00B0CF20 /* UIViewController+Photo.swift */; };
 		6C98C21C21A3C2D300B9A493 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 6C98C21B21A3C2D300B9A493 /* Podfile */; };
-		6C98C21E21A3C38600B9A493 /* UIViewController+Swizzling.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C98C21D21A3C38600B9A493 /* UIViewController+Swizzling.swift */; };
 		6CC3BAF321D62007003D544B /* WLInnerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CC3BAF221D62007003D544B /* WLInnerViewController.swift */; };
 		979BCAFEAE1B6BD67ADEC43B /* Pods_TSBaseViewController_Swift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F98C8691720B67FAA9E9BBAA /* Pods_TSBaseViewController_Swift.framework */; };
 /* End PBXBuildFile section */
@@ -56,6 +53,7 @@
 		2A82443FDA6CB01C708D80D8 /* Pods-TSBaseViewController_Swift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TSBaseViewController_Swift.release.xcconfig"; path = "Pods/Target Support Files/Pods-TSBaseViewController_Swift/Pods-TSBaseViewController_Swift.release.xcconfig"; sourceTree = "<group>"; };
 		6C0A652B21B36F23009969D3 /* WLLoadingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WLLoadingViewController.swift; sourceTree = "<group>"; };
 		6C0A652D21B36FC9009969D3 /* WLLoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WLLoadingView.swift; sourceTree = "<group>"; };
+		6C119B99222D0D1C00D21E5F /* WLNaviControllerConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WLNaviControllerConfig.swift; sourceTree = "<group>"; };
 		6C7EBC55219B1CF700B093BA /* TSBaseViewController_Swift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TSBaseViewController_Swift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6C7EBC58219B1CF700B093BA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6C7EBC5A219B1CF700B093BA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -78,11 +76,7 @@
 		6C7F603521A4080500B0CF20 /* TSConfig_Swift.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = TSConfig_Swift.plist; sourceTree = "<group>"; };
 		6C7F603721A40E0300B0CF20 /* UIBarButtonItem+Creat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIBarButtonItem+Creat.swift"; sourceTree = "<group>"; };
 		6C7F603921A40F9500B0CF20 /* WLBaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WLBaseViewController.swift; sourceTree = "<group>"; };
-		6C7F603B21A4153400B0CF20 /* UIViewController+Call.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Call.swift"; sourceTree = "<group>"; };
-		6C7F603D21A419D700B0CF20 /* WLSingleLeton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WLSingleLeton.swift; sourceTree = "<group>"; };
-		6C7F603F21A41B2E00B0CF20 /* UIViewController+Photo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Photo.swift"; sourceTree = "<group>"; };
 		6C98C21B21A3C2D300B9A493 /* Podfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		6C98C21D21A3C38600B9A493 /* UIViewController+Swizzling.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Swizzling.swift"; sourceTree = "<group>"; };
 		6CC3BAF221D62007003D544B /* WLInnerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WLInnerViewController.swift; sourceTree = "<group>"; };
 		F98C8691720B67FAA9E9BBAA /* Pods_TSBaseViewController_Swift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TSBaseViewController_Swift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -181,7 +175,6 @@
 		6C7EBD0B219C140600B093BA /* Code */ = {
 			isa = PBXGroup;
 			children = (
-				6C98C21D21A3C38600B9A493 /* UIViewController+Swizzling.swift */,
 				6C7F602721A3E44500B0CF20 /* UITabBarController+Orientation.swift */,
 				6C7F602921A3E45400B0CF20 /* UIViewController+config.swift */,
 				6C7F602B21A3E46800B0CF20 /* UINavigationController+Orientation.swift */,
@@ -190,12 +183,10 @@
 				6C7F603321A407B500B0CF20 /* WLNaviController.swift */,
 				6C7F603721A40E0300B0CF20 /* UIBarButtonItem+Creat.swift */,
 				6C7F603921A40F9500B0CF20 /* WLBaseViewController.swift */,
-				6C7F603B21A4153400B0CF20 /* UIViewController+Call.swift */,
-				6C7F603F21A41B2E00B0CF20 /* UIViewController+Photo.swift */,
-				6C7F603D21A419D700B0CF20 /* WLSingleLeton.swift */,
 				6C0A652B21B36F23009969D3 /* WLLoadingViewController.swift */,
 				6CC3BAF221D62007003D544B /* WLInnerViewController.swift */,
 				6C0A652D21B36FC9009969D3 /* WLLoadingView.swift */,
+				6C119B99222D0D1C00D21E5F /* WLNaviControllerConfig.swift */,
 			);
 			name = Code;
 			path = ../../Code;
@@ -369,7 +360,7 @@
 			inputFileListPaths = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-TSBaseViewController_Swift/Pods-TSBaseViewController_Swift-frameworks.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-TSBaseViewController_Swift/Pods-TSBaseViewController_Swift-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/WLToolsKit/WLToolsKit.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -380,7 +371,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TSBaseViewController_Swift/Pods-TSBaseViewController_Swift-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TSBaseViewController_Swift/Pods-TSBaseViewController_Swift-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -393,21 +384,18 @@
 				6C7F603421A407B500B0CF20 /* WLNaviController.swift in Sources */,
 				6C7F602A21A3E45400B0CF20 /* UIViewController+config.swift in Sources */,
 				6C7F603021A3ED0B00B0CF20 /* UINavigationController+Config.swift in Sources */,
+				6C119B9A222D0D1C00D21E5F /* WLNaviControllerConfig.swift in Sources */,
 				6C7F602821A3E44500B0CF20 /* UITabBarController+Orientation.swift in Sources */,
 				6C7F602E21A3EA3000B0CF20 /* UITabbarController+Config.swift in Sources */,
-				6C7F603E21A419D700B0CF20 /* WLSingleLeton.swift in Sources */,
-				6C7F603C21A4153400B0CF20 /* UIViewController+Call.swift in Sources */,
 				6C7F603821A40E0300B0CF20 /* UIBarButtonItem+Creat.swift in Sources */,
 				6C0A652C21B36F23009969D3 /* WLLoadingViewController.swift in Sources */,
 				6C7F603A21A40F9500B0CF20 /* WLBaseViewController.swift in Sources */,
-				6C98C21E21A3C38600B9A493 /* UIViewController+Swizzling.swift in Sources */,
 				6C0A652E21B36FC9009969D3 /* WLLoadingView.swift in Sources */,
 				6C7EBC5B219B1CF700B093BA /* ViewController.swift in Sources */,
 				6C7F603221A3F6FF00B0CF20 /* MainViewController.swift in Sources */,
 				6C7F602C21A3E46800B0CF20 /* UINavigationController+Orientation.swift in Sources */,
 				6C7EBC59219B1CF700B093BA /* AppDelegate.swift in Sources */,
 				6CC3BAF321D62007003D544B /* WLInnerViewController.swift in Sources */,
-				6C7F604021A41B2E00B0CF20 /* UIViewController+Photo.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

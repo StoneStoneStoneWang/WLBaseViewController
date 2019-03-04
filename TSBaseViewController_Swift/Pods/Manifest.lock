@@ -1,5 +1,5 @@
 PODS:
-  - WLToolsKit (1.1.8)
+  - WLToolsKit (1.2.2)
 
 DEPENDENCIES:
   - WLToolsKit
@@ -9,8 +9,8 @@ SPEC REPOS:
     - WLToolsKit
 
 SPEC CHECKSUMS:
-  WLToolsKit: d8a410e736f47ca36af259b8a14f2fb0cc5ccd7c
+  WLToolsKit: 820e6f27c86b78a67027234d2144390a4450ff7a
 
 PODFILE CHECKSUM: 1d6c4387bb669929a13896039dabf1fb13ad5c1b
 
-COCOAPODS: 1.5.3
+COCOAPODS: 1.6.0.beta.2

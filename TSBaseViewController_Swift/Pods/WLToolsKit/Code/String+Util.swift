@@ -7,6 +7,14 @@
 //
 
 import Foundation
+// MARK: 去除空格和换行之后是否为空
+extension String {
+    
+    public var wl_isEmpty: Bool {
+        
+        return trimmingCharacters(in: CharacterSet.whitespacesAndNewlines).isEmpty
+    }
+}
 
 // MARK: 字符串长度 length
 extension String {
@@ -140,4 +148,3 @@ extension String {
     // 用 lengthOfBytes会出现越界的问题 我想要得到是字符的数量而不是字节的数量
     // Terminating app due to uncaught exception 'NSRangeException', reason: '*** -[NSRegularExpression enumerateMatchesInString:options:range:usingBlock:]: Range or index out of bounds'
 }
-

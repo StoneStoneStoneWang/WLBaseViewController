@@ -8,25 +8,12 @@
 
 import UIKit
 import WLToolsKit
-class TSConfig_Swift: NSObject {
+class WLNaviConfig: NSObject {
     
-    static let shared = TSConfig_Swift()
+    static let shared = WLNaviConfig()
     
     private override init() {
         
-        guard let path = Bundle.main.path(forResource: "TSConfig_Swift", ofType: "plist") else { return }
-        
-        guard let json = NSDictionary(contentsOfFile: path) else { return }
-        
-        Back_Image = json["Back_Image"] as? String ?? ""
-        
-        Title_FontSize = CGFloat(Float(json["Title_FontSize"] as? String ?? "") ?? 0)
-        
-        Title_HEXColor = json["Title_HEXColor"] as? String ?? ""
-        
-        Background_HEXColor = json["Background_HEXColor"] as? String ?? ""
-        
-        NaviBackground_HEXColor = json["NaviBackground_HEXColor"] as? String ?? ""
     }
     // 返回按钮
     var Back_Image: String = ""
@@ -53,7 +40,7 @@ public enum TSNaviTransionType {
 open class WLNaviController: UINavigationController {
     
     open var transitionType: TSNaviTransionType = .push
-
+    
     public override init(rootViewController: UIViewController) {
         super.init(rootViewController: rootViewController)
         
@@ -62,7 +49,7 @@ open class WLNaviController: UINavigationController {
     required public init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-  
+    
     public override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
     }
@@ -70,7 +57,7 @@ open class WLNaviController: UINavigationController {
     open override func viewDidLoad() {
         super.viewDidLoad()
         
-        let shared = TSConfig_Swift.shared
+        let shared = WLNaviConfig.shared
         
         if !shared.NaviBackground_HEXColor.isEmpty {
             
@@ -85,14 +72,14 @@ open class WLNaviController: UINavigationController {
             ]
         }
     }
-
+    
     open override func pushViewController(_ viewController: UIViewController, animated: Bool) {
         
         if children.count > 0 {
             
             viewController.hidesBottomBarWhenPushed = true
             
-            let shared = TSConfig_Swift.shared
+            let shared = WLNaviConfig.shared
             
             viewController.navigationItem.leftBarButtonItem = UIBarButtonItem.barButtonItem(imageName: shared.Back_Image, target: self, action: #selector(pop))
         } 
@@ -103,13 +90,7 @@ extension WLNaviController {
     
     @objc func pop() {
         
-        if transitionType == .push {
-            
-            popViewController(animated: true)
-        } else {
-            
-            topViewController?.dismiss(animated: true, completion: nil)
-        }
+        popViewController(animated: true)
     }
 }
 

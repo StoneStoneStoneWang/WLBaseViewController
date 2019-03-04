@@ -18,7 +18,6 @@ open class WLBaseViewController: UIViewController {
         }
         
         return nil
-        
     }
     
     open override func viewDidLoad() {
@@ -114,6 +113,6 @@ extension WLBaseViewController {
     
     @objc open override func configOwnProperties() {
         
-        view.backgroundColor = WLHEXCOLOR(hexColor: TSConfig_Swift.shared.Background_HEXColor)
+        view.backgroundColor = WLHEXCOLOR(hexColor: WLNaviConfig.shared.Background_HEXColor)
     }
 }

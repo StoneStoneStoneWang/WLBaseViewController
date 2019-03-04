@@ -9,7 +9,6 @@
 import Foundation
 import UIKit
 
-
 // MARK: Screen 相关
 
 public let WL_SCREEN_BOUNDS: CGRect = UIScreen.main.bounds
@@ -20,12 +19,17 @@ public let WL_SCREEN_WIDTH: CGFloat = UIScreen.main.bounds.width
 
 public let WL_SCREEN_HEIGHT: CGFloat = UIScreen.main.bounds.height
 
+// MARK: 是否是iphonex
 public var KISIPHONEX: Bool = __CGSizeEqualToSize(CGSize(width: 375.0, height: 812.0), WL_SCREEN_SIZE) || __CGSizeEqualToSize(CGSize(width: 812.0, height: 375.0), WL_SCREEN_SIZE)
 
-public let WL_STATUSBAR_HEIGHT: CGFloat = KISIPHONEX ? 44 : 20
+// MARK: 是否是iphonex 以上版本
+public var KISIPHONEX_UP: Bool = WL_SCREEN_HEIGHT >= 812
 
-public let WL_TABBAR_HEIGHT: CGFloat = KISIPHONEX ? 34 + 49 : 49
+public let WL_STATUSBAR_HEIGHT: CGFloat = KISIPHONEX_UP ? 44 : 20
 
+public let WL_TOP_LAYOUT_GUARD: CGFloat = WL_STATUSBAR_HEIGHT + 44
+
+public let WL_TABBAR_HEIGHT: CGFloat = KISIPHONEX_UP ? 83 : 49
 
 // MARK: printLog
 public func printLog<T>(message: T,
@@ -132,6 +136,7 @@ extension String {
             default:
                 return "Simulator"
             }
+            
         } else {
             return "Unknown"
         }

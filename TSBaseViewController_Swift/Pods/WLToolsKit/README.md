@@ -1,6 +1,6 @@
-# TSToolKit_Swift
+# WLToolsKit
 
-pod 'WLToolKit'
+pod 'WLToolsKit'
 
 ## MXThenAction 
 ##then回调
