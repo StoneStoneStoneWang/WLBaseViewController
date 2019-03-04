@@ -3,7 +3,7 @@
 Pod::Spec.new do |s|
 
 s.name         = "WLBaseViewController"
-s.version      = "1.1.1"
+s.version      = "1.1.2"
 s.summary      = "A Lib For vc."
 s.description  = <<-DESC
 A Lib For vc.

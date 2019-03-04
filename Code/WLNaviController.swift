@@ -61,7 +61,7 @@ open class WLNaviController: UINavigationController {
         
         if !shared.NaviBackground_HEXColor.isEmpty {
             
-            navigationBar.barTintColor = WLHEXCOLOR(hexColor: shared.NaviBackground_HEXColor)
+            navigationBar.wl_setBackgroundColor(WLHEXCOLOR(hexColor: shared.NaviBackground_HEXColor))
         }
         
         if !shared.Title_HEXColor.isEmpty {
