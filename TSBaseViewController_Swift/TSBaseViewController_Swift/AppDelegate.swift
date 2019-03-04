@@ -16,7 +16,7 @@ class WLAAAAAAA: WLNaviControllerConfig {
     
     var Background_HEXColor: String { return "#f1f1f1" }
     
-    var NaviBackground_HEXColor: String { return "#eeeeee" }
+    var NaviBackground_HEXColor: String { return "#1d1c21" }
 }
 
 @UIApplicationMain
