@@ -46,6 +46,8 @@ open class WLNaviController: UINavigationController {
                 NSAttributedString.Key.foregroundColor: WLHEXCOLOR(hexColor: config.Title_HEXColor)
             ]
         }
+        
+        interactivePopGestureRecognizer?.delegate = self
     }
     
     open override func pushViewController(_ viewController: UIViewController, animated: Bool) {
@@ -60,6 +62,13 @@ open class WLNaviController: UINavigationController {
             }
         } 
         super.pushViewController(viewController, animated: animated)
+    }
+}
+extension WLNaviController: UIGestureRecognizerDelegate {
+    
+    public func gestureRecognizerShouldBegin(_ gestureRecognizer: UIGestureRecognizer) -> Bool {
+        
+        return viewControllers.count > 1
     }
 }
 extension WLNaviController {
