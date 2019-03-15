@@ -8,16 +8,24 @@
 
 import UIKit
 
-open class WLLoadingViewController: WLBaseViewController {
+@objc open class WLLoadingViewController: WLBaseViewController {
     
-    open var loadingView: WLLoadingView = WLLoadingView(frame: .zero)
+    @objc open var loadingView: WLLoadingView = WLLoadingView(frame: .zero)
     
-    open override func configLoading() {
+    @objc open override func configLoading() {
         
         loadingView.showToSuperView(view)
         
         loadingView.onLoadingStatusChanged(.begin)
         
         loadingView.onLoadingStatusChanged(.loading)
+        
+        loadingView.mDelegate = self
+    }
+}
+extension WLLoadingViewController: WLLoadingViewDelegate {
+    
+    @objc open func onReload() {
+        
     }
 }

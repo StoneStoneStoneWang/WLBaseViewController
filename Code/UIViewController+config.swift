@@ -14,8 +14,8 @@ extension UIViewController {
     @objc open func configNaviItem() { }
     
     @objc open func configOwnProperties() {
+
         
-        //        view.backgroundColor = 
     }
     
     @objc open func addOwnSubViewController() {}

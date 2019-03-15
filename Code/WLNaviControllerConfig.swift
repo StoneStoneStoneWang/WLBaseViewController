@@ -25,14 +25,7 @@ extension WLNaviController {
     
     public static func wl_setNaviConfig(_ config: WLNaviControllerConfig) {
         
-        WLNaviConfig.shared.Back_Image = config.Back_Image
+        WLNaviConfig.shared.config = config
         
-        WLNaviConfig.shared.Title_FontSize = config.Title_FontSize
-        
-        WLNaviConfig.shared.Title_HEXColor = config.Title_HEXColor
-        
-        WLNaviConfig.shared.Background_HEXColor = config.Background_HEXColor
-        
-        WLNaviConfig.shared.NaviBackground_HEXColor = config.NaviBackground_HEXColor
     }
 }

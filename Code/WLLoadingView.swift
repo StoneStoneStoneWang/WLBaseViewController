@@ -11,6 +11,11 @@ import WLToolsKit
 
 public typealias WLLoadingReloadAction = () -> ()
 
+protocol WLLoadingViewDelegate {
+    
+    func onReload()
+}
+
 open class WLLoadingView: UIView {
     
     public var iconImageView: UIImageView = UIImageView(image: UIImage(named: "Loading_Image")).then {
@@ -29,8 +34,6 @@ open class WLLoadingView: UIView {
     
     public var reloadItem: UIButton = UIButton(type: .custom)
     
-    public var reloadAction: WLLoadingReloadAction!
-    
     open func showToSuperView(_ superView: UIView?) {
         
         if let superView = superView {
@@ -47,6 +50,8 @@ open class WLLoadingView: UIView {
             window.addSubview(self)
         }
     }
+    
+    var mDelegate: WLLoadingViewDelegate!
     
     public override init(frame: CGRect) {
         super.init(frame: frame)
@@ -76,7 +81,9 @@ extension WLLoadingView {
     }
     @objc open func onReloadItemClick() {
         
-        reloadAction()
+        guard let delegate = mDelegate else { return }
+        
+        delegate.onReload()
     }
 }
 extension WLLoadingView {

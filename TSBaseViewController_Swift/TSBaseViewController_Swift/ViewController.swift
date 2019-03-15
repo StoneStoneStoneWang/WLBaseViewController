@@ -30,6 +30,7 @@ class ViewController: WLBaseViewController {
         btn.addTarget(self, action: #selector(onClick), for: .touchUpInside)
         
         view.backgroundColor = .white
+  
     }
     
     let btn = UIButton(type: .custom)

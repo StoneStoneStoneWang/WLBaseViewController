@@ -15,31 +15,11 @@ class WLNaviConfig: NSObject {
     private override init() {
         
     }
-    // 返回按钮
-    var Back_Image: String = ""
-    //  标题字体
-    var Title_FontSize: CGFloat = 0
-    // 标题颜色
-    var Title_HEXColor: String = ""
-    // root vc 背景色
-    var Background_HEXColor: String = ""
-    // 导航背景色
-    var NaviBackground_HEXColor: String = ""
-}
-
-public enum TSNaviTransionType {
-    case push
     
-    case present
-    
-    case drawerPush // 抽屉式的push
-    
-    case drawer // 抽屉
+    var config: WLNaviControllerConfig!
 }
 
 open class WLNaviController: UINavigationController {
-    
-    open var transitionType: TSNaviTransionType = .push
     
     public override init(rootViewController: UIViewController) {
         super.init(rootViewController: rootViewController)
@@ -57,20 +37,13 @@ open class WLNaviController: UINavigationController {
     open override func viewDidLoad() {
         super.viewDidLoad()
         
-        let shared = WLNaviConfig.shared
-        
-        if !shared.NaviBackground_HEXColor.isEmpty {
+        if let config = WLNaviConfig.shared.config {
             
-            
-            
-            navigationBar.wl_setBackgroundColor(WLHEXCOLOR(hexColor: shared.NaviBackground_HEXColor))
-        }
-        
-        if !shared.Title_HEXColor.isEmpty {
+            navigationBar.wl_setBackgroundColor(WLHEXCOLOR(hexColor: config.NaviBackground_HEXColor))
             
             navigationBar.titleTextAttributes = [
-                NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: shared.Title_FontSize),
-                NSAttributedString.Key.foregroundColor: WLHEXCOLOR(hexColor: shared.Title_HEXColor)
+                NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: config.Title_FontSize),
+                NSAttributedString.Key.foregroundColor: WLHEXCOLOR(hexColor: config.Title_HEXColor)
             ]
         }
     }
@@ -81,9 +54,10 @@ open class WLNaviController: UINavigationController {
             
             viewController.hidesBottomBarWhenPushed = true
             
-            let shared = WLNaviConfig.shared
-            
-            viewController.navigationItem.leftBarButtonItem = UIBarButtonItem.barButtonItem(imageName: shared.Back_Image, target: self, action: #selector(pop))
+            if let config = WLNaviConfig.shared.config {
+                
+                viewController.navigationItem.leftBarButtonItem = UIBarButtonItem.barButtonItem(imageName: config.Back_Image, target: self, action: #selector(pop))
+            }
         } 
         super.pushViewController(viewController, animated: animated)
     }

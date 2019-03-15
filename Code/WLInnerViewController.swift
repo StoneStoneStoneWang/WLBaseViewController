@@ -10,7 +10,7 @@ import UIKit
 import WebKit
 import WLToolsKit
 
-open class WLInnerViewController: WLLoadingViewController {
+@objc open class WLInnerViewController: WLLoadingViewController {
     
     open var webView: WKWebView = WKWebView(frame: .zero)
     
@@ -55,8 +55,6 @@ open class WLInnerViewController: WLLoadingViewController {
         webView.addObserver(self, forKeyPath: "estimatedProgress", options: .new, context: nil)
         
         webView.addObserver(self, forKeyPath: "scrollView.contentSize", options: .new, context: nil)
-        
-        loadReq(url: "https://www.baidu.com/")
         
     }
 }
@@ -110,6 +108,11 @@ extension WLInnerViewController: WKNavigationDelegate {}
 
 extension WLInnerViewController {
     
+    open func loadHTML(_ html: String) {
+        
+        webView.loadHTMLString(html, baseURL: nil)
+    }
+    
     open func loadReq(url: String) {
         
         let req = URLRequest(url: URL(string: url)!)
@@ -132,6 +135,8 @@ extension WLInnerViewController {
     open func webView(_ webView: WKWebView, didFail navigation: WKNavigation!, withError error: Error) {
         
         progressView.isHidden = true
+        
+        loadingView.onLoadingStatusChanged(.fail)
     }
 }
 
