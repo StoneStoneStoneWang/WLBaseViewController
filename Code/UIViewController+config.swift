@@ -13,10 +13,7 @@ extension UIViewController {
     
     @objc open func configNaviItem() { }
     
-    @objc open func configOwnProperties() {
-
-        
-    }
+    @objc open func configOwnProperties() { }
     
     @objc open func addOwnSubViewController() {}
     

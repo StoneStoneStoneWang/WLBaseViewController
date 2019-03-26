@@ -8,18 +8,16 @@
 
 import UIKit
 import WLToolsKit
-class WLNaviConfig: NSObject {
+@objc public final class WLNaviConfig: NSObject {
     
-    static let shared = WLNaviConfig()
+    @objc public static let shared = WLNaviConfig()
     
-    private override init() {
-        
-    }
+    private override init() { }
     
     var config: WLNaviControllerConfig!
 }
 
-open class WLNaviController: UINavigationController {
+@objc open class WLNaviController: UINavigationController {
     
     public override init(rootViewController: UIViewController) {
         super.init(rootViewController: rootViewController)
@@ -66,16 +64,9 @@ open class WLNaviController: UINavigationController {
 }
 extension WLNaviController: UIGestureRecognizerDelegate {
     
-    public func gestureRecognizerShouldBegin(_ gestureRecognizer: UIGestureRecognizer) -> Bool {
-        
-        return viewControllers.count > 1
-    }
+    public func gestureRecognizerShouldBegin(_ gestureRecognizer: UIGestureRecognizer) -> Bool { return viewControllers.count > 1 }
 }
 extension WLNaviController {
     
-    @objc func pop() {
-        
-        popViewController(animated: true)
-    }
+    @objc func pop() { popViewController(animated: true) }
 }
-

@@ -12,10 +12,7 @@ open class WLBaseViewController: UIViewController {
     
     open var navBarHairlineImageView: UIImageView? {
         
-        if let navi = navigationController {
-            
-            return findHairlineImageViewUnder(view: navi.navigationBar)
-        }
+        if let navi = navigationController { return findHairlineImageViewUnder(view: navi.navigationBar) }
         
         return nil
     }
@@ -83,30 +80,15 @@ extension WLBaseViewController {
 //MARK: status bar 与  屏幕朝向
 extension WLBaseViewController {
     
-    open override var preferredStatusBarStyle: UIStatusBarStyle {
-        
-        return .default
-    }
+    open override var preferredStatusBarStyle: UIStatusBarStyle { return .lightContent }
     
-    open override var prefersStatusBarHidden: Bool {
-        
-        return false
-    }
+    open override var prefersStatusBarHidden: Bool { return false }
     
-    open override var preferredInterfaceOrientationForPresentation: UIInterfaceOrientation {
-        
-        return .portrait
-    }
+    open override var preferredInterfaceOrientationForPresentation: UIInterfaceOrientation { return .portrait }
     
-    open override var shouldAutorotate: Bool {
-        
-        return false
-    }
+    open override var shouldAutorotate: Bool { return false }
     
-    open override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
-        
-        return .portrait
-    }
+    open override var supportedInterfaceOrientations: UIInterfaceOrientationMask { return .portrait }
 }
 
 extension WLBaseViewController {

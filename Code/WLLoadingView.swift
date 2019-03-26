@@ -11,17 +11,12 @@ import WLToolsKit
 
 public typealias WLLoadingReloadAction = () -> ()
 
-protocol WLLoadingViewDelegate {
+@objc public protocol WLLoadingViewDelegate {
     
     func onReload()
 }
 
-open class WLLoadingView: UIView {
-    
-    public var iconImageView: UIImageView = UIImageView(image: UIImage(named: "Loading_Image")).then {
-        
-        $0.contentMode = .scaleAspectFit
-    }
+@objc public final class WLLoadingView: UIView {
     
     public var activity: UIActivityIndicatorView = UIActivityIndicatorView(style: .gray)
     
@@ -34,7 +29,7 @@ open class WLLoadingView: UIView {
     
     public var reloadItem: UIButton = UIButton(type: .custom)
     
-    open func showToSuperView(_ superView: UIView?) {
+    public func showToSuperView(_ superView: UIView?) {
         
         if let superView = superView {
             
@@ -51,7 +46,7 @@ open class WLLoadingView: UIView {
         }
     }
     
-    var mDelegate: WLLoadingViewDelegate!
+    public var mDelegate: WLLoadingViewDelegate!
     
     public override init(frame: CGRect) {
         super.init(frame: frame)
@@ -65,13 +60,11 @@ open class WLLoadingView: UIView {
 }
 extension WLLoadingView {
     
-    @objc open func commitInit() {
+    @objc final func commitInit() {
         
         backgroundColor = WLHEXCOLOR(hexColor: "#eeeeee")
         
         addSubview(reloadItem)
-        
-        addSubview(iconImageView)
         
         addSubview(activity)
         
@@ -79,20 +72,17 @@ extension WLLoadingView {
         
         reloadItem.addTarget(self, action: #selector(onReloadItemClick), for: .touchUpInside)
     }
-    @objc open func onReloadItemClick() {
+    @objc public func onReloadItemClick() {
         
         guard let delegate = mDelegate else { return }
         
         delegate.onReload()
     }
 }
+
 extension WLLoadingView {
     
-    
-}
-extension WLLoadingView {
-    
-    @objc open func onBegin() {
+    @objc public func onBegin() {
         
         stateLabel.frame = CGRect(x: 0, y: 0, width: bounds.width, height: 40)
         
@@ -100,13 +90,9 @@ extension WLLoadingView {
         
         activity.center = CGPoint(x: bounds.width / 2, y: bounds.height / 2 )
         
-        iconImageView.frame = CGRect(x: 0, y: 0, width: 100, height: 100)
-        
-        iconImageView.center = CGPoint(x: bounds.width / 2, y: bounds.height / 2 - 100)
-        
         reloadItem.frame = bounds
     }
-    @objc open func onLoading() {
+    @objc public func onLoading() {
         
         activity.startAnimating()
         
@@ -115,7 +101,7 @@ extension WLLoadingView {
         reloadItem.isHidden = true
     }
     
-    @objc open func onFail() {
+    @objc public func onFail() {
         
         activity.stopAnimating()
         
@@ -123,11 +109,9 @@ extension WLLoadingView {
         
         reloadItem.isHidden = false
     }
-    @objc open func onSucc() {
-        
-        onDismiss()
-    }
-    @objc open func onReload() {
+    @objc public func onSucc() { onDismiss() }
+    
+    @objc public func onReload() {
         
         activity.startAnimating()
         
@@ -135,33 +119,24 @@ extension WLLoadingView {
         
         reloadItem.isHidden = true
     }
-    @objc open func onDismiss() {
+    @objc public func onDismiss() {
         
-        if activity.isAnimating {
-            
-            activity.stopAnimating()
-        }
+        if activity.isAnimating { activity.stopAnimating() }
         
         removeFromSuperview()
     }
 }
 extension WLLoadingView {
     
-    open func onLoadingStatusChanged(_ status: WLLoadingStatus) {
+    public func onLoadingStatusChanged(_ status: WLLoadingStatus) {
         
         switch status {
-        case .begin:
-            onBegin()
-        case .loading:
-            onLoading()
-        case .succ:
-            onSucc()
-        case .fail:
-            onFail()
-        case .dismiss:
-            onDismiss()
-        case .reload:
-            onReload()
+        case .begin:onBegin()
+        case .loading:onLoading()
+        case .succ:onSucc()
+        case .fail:onFail()
+        case .dismiss:onDismiss()
+        case .reload: onReload()
         }
     }
 }

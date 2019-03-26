@@ -8,24 +8,20 @@
 
 import Foundation
 import UIKit
-public protocol WLNaviControllerConfig {
+@objc public protocol WLNaviControllerConfig {
     
-    var Back_Image: String { get }
+    @objc var Back_Image: String { get }
     //  标题字体
-    var Title_FontSize: CGFloat { get }
+    @objc var Title_FontSize: CGFloat { get }
     // 标题颜色
-    var Title_HEXColor: String { get }
+    @objc var Title_HEXColor: String { get }
     // root vc 背景色
-    var Background_HEXColor: String { get }
+    @objc var Background_HEXColor: String { get }
     // 导航背景色
-    var NaviBackground_HEXColor: String { get }
+    @objc var NaviBackground_HEXColor: String { get }
 }
 
 extension WLNaviController {
     
-    public static func wl_setNaviConfig(_ config: WLNaviControllerConfig) {
-        
-        WLNaviConfig.shared.config = config
-        
-    }
+    @objc public static func wl_setNaviConfig(_ config: WLNaviControllerConfig) { WLNaviConfig.shared.config = config }
 }

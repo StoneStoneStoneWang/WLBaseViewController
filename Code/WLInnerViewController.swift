@@ -39,18 +39,17 @@ import WLToolsKit
         
         let rect = loadingView.frame
         
-        loadingView.frame = CGRect(x: rect.minX, y: rect.minY + (KISIPHONEX ? 89 : 64) + 2, width: rect.width, height: rect.height)
-        
+        loadingView.frame = CGRect(x: rect.minX, y: rect.minY + WL_TOP_LAYOUT_GUARD + 2, width: rect.width, height: rect.height)
     }
     
     open override func configOwnSubViews() {
         super.configOwnSubViews()
         
-        webView.frame = CGRect(x: 0, y: KISIPHONEX ? 89 : 64, width: view.bounds.width, height: view.bounds.height - 64)
+        webView.frame = CGRect(x: 0, y: WL_TOP_LAYOUT_GUARD, width: view.bounds.width, height: view.bounds.height - WL_TOP_LAYOUT_GUARD)
         
         webView.navigationDelegate = self
         
-        progressView.frame = CGRect(x: 0, y: KISIPHONEX ? 89 : 64, width: view.bounds.width, height: 2)
+        progressView.frame = CGRect(x: 0, y: WL_TOP_LAYOUT_GUARD, width: view.bounds.width, height: 2)
         
         webView.addObserver(self, forKeyPath: "estimatedProgress", options: .new, context: nil)
         
@@ -94,7 +93,7 @@ extension WLInnerViewController {
                 
                 if !webView.isLoading {
                     
-                    webView.frame = CGRect(x: 0, y: 0, width: view.bounds.width, height: webView.scrollView.contentSize.height)
+                    webView.frame = CGRect(x: 0, y: WL_TOP_LAYOUT_GUARD, width: view.bounds.width, height: webView.scrollView.contentSize.height)
                     
                     webView.sizeToFit()
                     

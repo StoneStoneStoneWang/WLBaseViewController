@@ -11,7 +11,7 @@ import UIKit
 
 extension UITabBarController {
     
-    open func addChildVC(childVC: UIViewController, title: String = "" ,fontSize: CGFloat,titleColor: UIColor ,highColor: UIColor,imageName: String = "" ,selectedImageName: String = "" ) {
+    @objc open func addChildVC(childVC: UIViewController, title: String = "" ,fontSize: CGFloat,titleColor: UIColor ,highColor: UIColor,imageName: String = "" ,selectedImageName: String = "" ) {
         
         childVC.navigationItem.title = title
         

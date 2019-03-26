@@ -12,7 +12,7 @@ import UIKit
 // 朝向
 extension UITabBarController {
     // 支持自动旋转
-    open override var shouldAutorotate: Bool {
+    @objc open override var shouldAutorotate: Bool {
         
         guard let selectedViewController = selectedViewController  else {
             
@@ -21,7 +21,7 @@ extension UITabBarController {
         return selectedViewController.shouldAutorotate
     }
     // 支持方向
-    open override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
+    @objc open override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
         
         guard let selectedViewController = selectedViewController  else {
             
@@ -30,7 +30,7 @@ extension UITabBarController {
         return selectedViewController.supportedInterfaceOrientations
     }
     // 初始化朝向
-    open override var preferredInterfaceOrientationForPresentation: UIInterfaceOrientation  {
+    @objc open override var preferredInterfaceOrientationForPresentation: UIInterfaceOrientation  {
         guard let selectedViewController = selectedViewController  else {
             
             return .portrait

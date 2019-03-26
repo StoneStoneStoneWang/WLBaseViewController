@@ -11,7 +11,7 @@ import UIKit
 
 extension UIBarButtonItem {
     
-    public static func barButtonItem(imageName : String, highImageName : String = "", size : CGSize = CGSize.zero ,target: AnyObject ,action: Selector) -> UIBarButtonItem {
+    @objc public static func barButtonItem(imageName : String, highImageName : String = "", size : CGSize = CGSize.zero ,target: AnyObject ,action: Selector) -> UIBarButtonItem {
         
         // 1.创建UIButton
         let btn = UIButton()
@@ -35,7 +35,7 @@ extension UIBarButtonItem {
         
         return UIBarButtonItem(customView : btn)
     }
-    public static func barButtonItem(name : String,nameColor: UIColor ,highName : String = "",highColor: UIColor, size : CGSize = CGSize.zero ,target: AnyObject ,action: Selector) -> UIBarButtonItem {
+    @objc public static func barButtonItem(name : String,nameColor: UIColor ,highName : String = "",highColor: UIColor, size : CGSize = CGSize.zero ,target: AnyObject ,action: Selector) -> UIBarButtonItem {
         
         // 1.创建UIButton
         let btn = UIButton(type: .custom).then {
@@ -65,7 +65,7 @@ extension UIBarButtonItem {
         
         return UIBarButtonItem(customView : btn)
     }
-    public static func barButtonItem(name : String,nameColor: UIColor ,highName : String = "",highColor: UIColor,disbledName: String,disbledColor: UIColor,font: UIFont, size : CGSize = CGSize.zero ,target: AnyObject ,action: Selector) -> UIBarButtonItem {
+    @objc public static func barButtonItem(name : String,nameColor: UIColor ,highName : String = "",highColor: UIColor,disbledName: String,disbledColor: UIColor,font: UIFont, size : CGSize = CGSize.zero ,target: AnyObject ,action: Selector) -> UIBarButtonItem {
         
         // 1.创建UIButton
         let btn = UIButton()
