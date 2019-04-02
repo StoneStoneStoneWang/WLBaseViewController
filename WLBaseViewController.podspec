@@ -3,7 +3,7 @@
 Pod::Spec.new do |s|
 
 s.name         = "WLBaseViewController"
-s.version      = "1.1.5"
+s.version      = "1.1.6"
 s.summary      = "A Lib For vc."
 s.description  = <<-DESC
 A Lib For vc.
@@ -15,7 +15,7 @@ s.author             = { "StoneStoneStoneWang" => "yuanxingfu1314@163.com" }
 s.platform     = :ios, "9.0"
 s.ios.deployment_target = "9.0"
 
-s.swift_version = '4.2'
+s.swift_version = '5.0'
 
 s.frameworks = 'UIKit', 'Foundation'
 
