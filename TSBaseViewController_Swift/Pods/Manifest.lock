@@ -1,5 +1,35 @@
 PODS:
-  - WLToolsKit (1.2.9)
+  - WLToolsKit (1.3.0):
+    - WLToolsKit/WLAppStore (= 1.3.0)
+    - WLToolsKit/WLColor (= 1.3.0)
+    - WLToolsKit/WLCommon (= 1.3.0)
+    - WLToolsKit/WLDate (= 1.3.0)
+    - WLToolsKit/WLDeviceInfo (= 1.3.0)
+    - WLToolsKit/WLImage (= 1.3.0)
+    - WLToolsKit/WLJsonCast (= 1.3.0)
+    - WLToolsKit/WLNaviBar (= 1.3.0)
+    - WLToolsKit/WLOpenUrl (= 1.3.0)
+    - WLToolsKit/WLString (= 1.3.0)
+    - WLToolsKit/WLSwizzling (= 1.3.0)
+    - WLToolsKit/WLThen (= 1.3.0)
+  - WLToolsKit/WLAppStore (1.3.0):
+    - WLToolsKit/WLOpenUrl
+  - WLToolsKit/WLColor (1.3.0):
+    - WLToolsKit/WLString
+  - WLToolsKit/WLCommon (1.3.0):
+    - WLToolsKit/WLDate
+  - WLToolsKit/WLDate (1.3.0)
+  - WLToolsKit/WLDeviceInfo (1.3.0):
+    - WLToolsKit/WLCommon
+  - WLToolsKit/WLImage (1.3.0):
+    - WLToolsKit/WLColor
+    - WLToolsKit/WLCommon
+  - WLToolsKit/WLJsonCast (1.3.0)
+  - WLToolsKit/WLNaviBar (1.3.0)
+  - WLToolsKit/WLOpenUrl (1.3.0)
+  - WLToolsKit/WLString (1.3.0)
+  - WLToolsKit/WLSwizzling (1.3.0)
+  - WLToolsKit/WLThen (1.3.0)
 
 DEPENDENCIES:
   - WLToolsKit
@@ -9,8 +39,8 @@ SPEC REPOS:
     - WLToolsKit
 
 SPEC CHECKSUMS:
-  WLToolsKit: 928b560a2f86f090bf3bb2d4332f0e0adce4f4c9
+  WLToolsKit: 7d942c06c226401c675e34d8bd9fc4ad257f2c44
 
 PODFILE CHECKSUM: 1d6c4387bb669929a13896039dabf1fb13ad5c1b
 
-COCOAPODS: 1.6.1
+COCOAPODS: 1.7.0.beta.3
