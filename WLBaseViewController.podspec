@@ -3,7 +3,7 @@
 Pod::Spec.new do |spec|
   
   spec.name         = "WLBaseViewController"
-  spec.version      = "1.1.8"
+  spec.version      = "1.1.9"
   spec.summary      = "A Lib For vc."
   spec.description  = <<-DESC
   A Lib For vc.
@@ -21,62 +21,63 @@ Pod::Spec.new do |spec|
   
   spec.source = { :git => "https://github.com/StoneStoneStoneWang/WLBaseViewController.git", :tag => "#{spec.version}" }
   
-  spec.subspec 'WLOrientation' do |orientation|
+  spec.subspec 'Orientation' do |orientation|
     
     orientation.source_files = "Code/Orientation/*.{swift}"
   end
-  spec.subspec 'WLConfig' do |config|
+  spec.subspec 'Config' do |config|
     
     config.source_files = "Code/Config/*.{swift}"
   end
   
-  spec.subspec 'WLNavi' do |config|
+  spec.subspec 'Navi' do |config|
     
-    config.subspec 'WLNaviItem' do |item|
+    config.subspec 'NaviItem' do |item|
       
       item.source_files = "Code/BarButtonItem/*.{swift}"
-      item.dependency 'WLToolsKit/WLThen'
+      item.dependency 'WLToolsKit/Then'
     end
-    config.subspec 'WLNaviConfig' do |naviConfig|
+    config.subspec 'NaviConfig' do |naviConfig|
       
       naviConfig.source_files = "Code/Navi/Config/*.{swift}"
     end
-    config.subspec 'WLNaviVC' do |vc|
+    config.subspec 'NaviController' do |vc|
       
       vc.source_files = "Code/Navi/VC/*.{swift}"
-      vc.dependency 'WLBaseViewController/WLNavi/WLNaviConfig'
-      vc.dependency 'WLBaseViewController/WLNavi/WLNaviItem'
-      vc.dependency 'WLToolsKit/WLColor'
-      vc.dependency 'WLToolsKit/WLNaviBar'
+      vc.dependency 'WLBaseViewController/Navi/NaviConfig'
+      vc.dependency 'WLBaseViewController/Navi/NaviItem'
+      vc.dependency 'WLToolsKit/Color'
+      vc.dependency 'WLToolsKit/NaviBar'
     end
   end
-  spec.subspec 'WLTab' do |tab|
+  
+  spec.subspec 'Tab' do |tab|
     
     tab.source_files = "Code/Tab/*.{swift}"
-    tab.dependency 'WLToolsKit/WLColor'
-    tab.dependency 'WLBaseViewController/WLConfig'
-    tab.dependency 'WLBaseViewController/WLOrientation'
-    tab.dependency 'WLBaseViewController/WLNavi/WLNaviVC'
+    tab.dependency 'WLToolsKit/Color'
+    tab.dependency 'WLBaseViewController/Config'
+    tab.dependency 'WLBaseViewController/Orientation'
+    tab.dependency 'WLBaseViewController/Navi/NaviController'
   end
-  spec.subspec 'WLBaseVC' do |base|
+  spec.subspec 'BaseViewController' do |base|
     base.source_files = "Code/Base/*.{swift}"
-    base.dependency 'WLBaseViewController/WLNavi/WLNaviVC'
-    base.dependency 'WLBaseViewController/WLConfig'
+    base.dependency 'WLBaseViewController/Navi/NaviController'
+    base.dependency 'WLBaseViewController/Config'
   end
-  spec.subspec 'WLLoading' do |loading|
+  spec.subspec 'Loading' do |loading|
     loading.source_files = "Code/Loading/*.{swift}"
-    loading.dependency 'WLToolsKit/WLCommon'
-    loading.dependency 'WLToolsKit/WLThen'
-    loading.dependency 'WLToolsKit/WLColor'
-    loading.dependency 'WLBaseViewController/WLConfig'
-    loading.dependency 'WLBaseViewController/WLBaseVC'
+    loading.dependency 'WLToolsKit/Common'
+    loading.dependency 'WLToolsKit/Then'
+    loading.dependency 'WLToolsKit/Color'
+    loading.dependency 'WLBaseViewController/Config'
+    loading.dependency 'WLBaseViewController/BaseViewController'
   end
   
-  spec.subspec 'WLInner' do |inner|
+  spec.subspec 'Inner' do |inner|
     inner.source_files = "Code/Inner/*.{swift}"
-    inner.dependency 'WLToolsKit/WLCommon'
-    inner.dependency 'WLToolsKit/WLThen'
-    inner.dependency 'WLBaseViewController/WLLoading'
+    inner.dependency 'WLToolsKit/Common'
+    inner.dependency 'WLToolsKit/Then'
+    inner.dependency 'WLBaseViewController/Loading'
   end
   
 end
