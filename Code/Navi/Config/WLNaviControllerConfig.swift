@@ -29,7 +29,7 @@ public final class WLNaviConfig: NSObject {
     
     private override init() { }
     
-    var config: WLNaviControllerConfig!
+    public var config: WLNaviControllerConfig!
 }
 
 extension UINavigationController {

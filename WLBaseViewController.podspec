@@ -3,7 +3,7 @@
 Pod::Spec.new do |spec|
   
   spec.name         = "WLBaseViewController"
-  spec.version      = "1.1.9"
+  spec.version      = "1.2.0"
   spec.summary      = "A Lib For vc."
   spec.description  = <<-DESC
   A Lib For vc.
@@ -46,6 +46,7 @@ Pod::Spec.new do |spec|
       vc.source_files = "Code/Navi/VC/*.{swift}"
       vc.dependency 'WLBaseViewController/Navi/NaviConfig'
       vc.dependency 'WLBaseViewController/Navi/NaviItem'
+      vc.dependency 'WLBaseViewController/Orientation'
       vc.dependency 'WLToolsKit/Color'
       vc.dependency 'WLToolsKit/NaviBar'
     end

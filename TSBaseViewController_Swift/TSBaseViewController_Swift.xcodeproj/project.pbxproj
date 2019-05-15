@@ -20,7 +20,7 @@
 		6CC5F28E226061140078D135 /* WLLoadingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CC5F27E226061130078D135 /* WLLoadingViewController.swift */; };
 		6CC5F28F226061140078D135 /* WLLoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CC5F27F226061130078D135 /* WLLoadingView.swift */; };
 		6CC5F290226061140078D135 /* WLInnerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CC5F281226061130078D135 /* WLInnerViewController.swift */; };
-		6CC5F295226061140078D135 /* UIBarButtonItem+Creat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CC5F289226061130078D135 /* UIBarButtonItem+Creat.swift */; };
+		6CC5F295226061140078D135 /* UIBarButtonItem+Create.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CC5F289226061130078D135 /* UIBarButtonItem+Create.swift */; };
 		6CC5F296226061140078D135 /* WLBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CC5F28B226061130078D135 /* WLBaseViewController.swift */; };
 		6CC5F29B226065D20078D135 /* WLNaviControllerConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CC5F298226065D20078D135 /* WLNaviControllerConfig.swift */; };
 		6CC5F29C226065D20078D135 /* WLNaviController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CC5F29A226065D20078D135 /* WLNaviController.swift */; };
@@ -68,7 +68,7 @@
 		6CC5F27E226061130078D135 /* WLLoadingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WLLoadingViewController.swift; sourceTree = "<group>"; };
 		6CC5F27F226061130078D135 /* WLLoadingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WLLoadingView.swift; sourceTree = "<group>"; };
 		6CC5F281226061130078D135 /* WLInnerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WLInnerViewController.swift; sourceTree = "<group>"; };
-		6CC5F289226061130078D135 /* UIBarButtonItem+Creat.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIBarButtonItem+Creat.swift"; sourceTree = "<group>"; };
+		6CC5F289226061130078D135 /* UIBarButtonItem+Create.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIBarButtonItem+Create.swift"; sourceTree = "<group>"; };
 		6CC5F28B226061130078D135 /* WLBaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WLBaseViewController.swift; sourceTree = "<group>"; };
 		6CC5F298226065D20078D135 /* WLNaviControllerConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WLNaviControllerConfig.swift; sourceTree = "<group>"; };
 		6CC5F29A226065D20078D135 /* WLNaviController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WLNaviController.swift; sourceTree = "<group>"; };
@@ -229,7 +229,7 @@
 		6CC5F288226061130078D135 /* BarButtonItem */ = {
 			isa = PBXGroup;
 			children = (
-				6CC5F289226061130078D135 /* UIBarButtonItem+Creat.swift */,
+				6CC5F289226061130078D135 /* UIBarButtonItem+Create.swift */,
 			);
 			path = BarButtonItem;
 			sourceTree = "<group>";
@@ -463,7 +463,7 @@
 				6CC5F296226061140078D135 /* WLBaseViewController.swift in Sources */,
 				6C7EBC59219B1CF700B093BA /* AppDelegate.swift in Sources */,
 				6CC5F29B226065D20078D135 /* WLNaviControllerConfig.swift in Sources */,
-				6CC5F295226061140078D135 /* UIBarButtonItem+Creat.swift in Sources */,
+				6CC5F295226061140078D135 /* UIBarButtonItem+Create.swift in Sources */,
 				6CC5F2A122606BDC0078D135 /* UITabbarController+Config.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

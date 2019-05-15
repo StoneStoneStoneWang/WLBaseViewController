@@ -2,25 +2,25 @@
 A lib for base view controller with Swift。
 
 1. orientation 控制
-pod  'WLBaseViewController/WLOrientation'
+pod  'WLBaseViewController/Orientation'
 
 2.把viewdidload替换为自己的方法
-pod  'WLBaseViewController/WLConfig'
+pod  'WLBaseViewController/Config'
 
 pod 'WLBaseViewController'
 3. navi
-pod  'WLBaseViewController/WLNavi'
+pod  'WLBaseViewController/Navi'
 
 4. tabbar 
-pod  'WLBaseViewController/WLTab'
+pod  'WLBaseViewController/Tab'
 
 5. basevc
-pod  'WLBaseViewController/WLBaseVC'
+pod  'WLBaseViewController/BaseVC'
 
 6. loading
-pod  'WLBaseViewController/WLLoading'
+pod  'WLBaseViewController/Loading'
 
 7. inner
-pod  'WLBaseViewController/WLInner'
+pod  'WLBaseViewController/Inner'
 
 ## 也可以 pod 'WLBaseViewController'
